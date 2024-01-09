@@ -1,0 +1,89 @@
+package broker;
+
+import static org.junit.Assert.assertNotNull;
+
+import javax.jms.Connection;
+import javax.jms.ConnectionFactory;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.MessageConsumer;
+import javax.jms.MessageProducer;
+import javax.jms.ObjectMessage;
+import javax.jms.Queue;
+import javax.jms.Session;
+
+import org.apache.activemq.ActiveMQConnectionFactory;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import service.core.ClientInfo;
+import service.core.ClientMessage;
+import service.core.OfferMessage;
+import service.core.Quotation;
+
+public class BrokerTest {
+    private Connection connection;
+    private Session session;
+    private ClientInfo clientInfo;
+
+    @Before
+    public void setUp() throws JMSException {
+        ConnectionFactory factory = new ActiveMQConnectionFactory("failover://tcp://localhost:61616");
+        connection = factory.createConnection();
+        connection.setClientID("test-client");
+        session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
+        connection.start();
+
+        clientInfo = new ClientInfo("Niki Collier", ClientInfo.FEMALE, 49, 1.5494, 80, false, false);
+    }
+
+    @After
+    public void tearDown() throws JMSException {
+        if (connection != null) {
+            connection.close();
+        }
+    }
+
+    @Test
+    public void testJMSFunctionality() throws JMSException, InterruptedException {
+        Queue requestQueue = session.createQueue("CLIENT");
+        MessageProducer requestProducer = session.createProducer(requestQueue);
+
+        // Send a request for Niki Collier
+        ClientMessage clientMsg = new ClientMessage(1L, clientInfo);
+        Message request = session.createObjectMessage(clientMsg);
+        requestProducer.send(request);
+
+        Queue responseQueue = session.createQueue("OFFERS");
+        MessageConsumer responseConsumer = session.createConsumer(responseQueue);
+        Message message = responseConsumer.receive(5000); // Wait for a response for 5 seconds
+
+        assertNotNull("Received a response message", message);
+
+        try {
+            Object content = ((ObjectMessage) message).getObject();
+            OfferMessage offerMessage = (OfferMessage) content;
+
+            // Verify the client information
+            ClientInfo receivedClientInfo = offerMessage.getInfo();
+            assertNotNull("Received client info", receivedClientInfo);
+            // Add more assertions to check the client information
+
+            for (Quotation quotation : offerMessage.getQuotations()) {
+                // Verify each quotation
+                assertNotNull("Received quotation", quotation);
+                // Add more assertions to check the quotation details
+            }
+
+            message.acknowledge();
+
+        } catch (ClassCastException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // You can add more test cases for different scenarios
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.apache.activemq.broker.Connection"/>
+    <fullyQualifiedTypeName name="org.junit.Test"/>
+    <fullyQualifiedTypeName name="service.auldfellas.AuldfellasMain"/>
+    <fullyQualifiedTypeName name="service.core.QuotationMessage"/>
+    <fullyQualifiedTypeName name="javax.jms.ConnectionFactory"/>
+    <fullyQualifiedTypeName name="org.apache.activemq.spring.ActiveMQConnectionFactory"/>
+    <fullyQualifiedTypeName name="org.apache.activemq.ActiveMQConnection"/>
+    <fullyQualifiedTypeName name="org.apache.activemq.ActiveMQConnectionFactory"/>
+    <fullyQualifiedTypeName name="javax.jms.Connection"/>
+    <fullyQualifiedTypeName name="javax.jms.Session"/>
+    <fullyQualifiedTypeName name="javax.jms.Queue"/>
+    <fullyQualifiedTypeName name="javax.jms.Message"/>
+    <fullyQualifiedTypeName name="javax.jms.JMSException"/>
+    <fullyQualifiedTypeName name="service.core.Quotation"/>
+    <fullyQualifiedTypeName name="java.text.NumberFormat"/>
+    <fullyQualifiedTypeName name="org.apache.activemq.broker.region.Topic"/>
+    <fullyQualifiedTypeName name="javax.jms.Topic"/>
+    <fullyQualifiedTypeName name="javax.jms.MessageConsumer"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ConcurrentHashMap"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="javax.jms.MessageListener"/>
+    <fullyQualifiedTypeName name="javax.jms.TextMessage"/>
+    <fullyQualifiedTypeName name="javax.jms.ObjectMessage"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.jms.MessageProducer"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="broker.sender.BrokerMain"/>
+    <fullyQualifiedTypeName name="service.core.ClientMessage"/>
+    <fullyQualifiedTypeName name="service.core.OfferMessage"/>
+    <fullyQualifiedTypeName name="service.core.ClientInfo"/>
+</qualifiedTypeNameHistroy>

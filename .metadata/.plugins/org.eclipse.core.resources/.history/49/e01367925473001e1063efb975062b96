@@ -1,0 +1,127 @@
+package broker.sender;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Map;
+
+import javax.jms.Connection;
+import javax.jms.ConnectionFactory;
+import javax.jms.JMSException;
+import javax.jms.Message;
+import javax.jms.MessageConsumer;
+import javax.jms.MessageListener;
+import javax.jms.MessageProducer;
+import javax.jms.ObjectMessage;
+import javax.jms.Queue;
+import javax.jms.Session;
+import javax.jms.Topic;
+
+import org.apache.activemq.ActiveMQConnectionFactory;
+
+import service.core.ClientMessage;
+import service.core.OfferMessage;
+import service.core.QuotationMessage;
+
+public class BrokerMain {
+	public static Map<Long, OfferMessage> cache = new HashMap<>();
+
+	public static void main(String args[]) throws JMSException {
+		String host = args.length > 0 ? args[0] : "localhost";
+		ConnectionFactory factory = new ActiveMQConnectionFactory("failover://tcp://localhost:61616");
+
+		Connection connection = factory.createConnection();
+		connection.setClientID("sender");
+		Session session = connection.createSession(false, Session.CLIENT_ACKNOWLEDGE);
+		connection.start();
+
+		Topic applicationsTopic = session.createTopic("APPLICATIONS");
+		Queue quotationsQueue = session.createQueue("QUOTATIONS");
+		Queue offersQueue = session.createQueue("OFFERS");
+		//Queue clientQueue = session.createQueue("CLIENT");
+
+		//MessageConsumer clientConsumer = session.createConsumer(clientQueue);
+		MessageConsumer quotationsConsumer = session.createConsumer(quotationsQueue);
+		MessageProducer offersProducer = session.createProducer(offersQueue);
+		MessageConsumer applicationsConsumer = session.createConsumer(applicationsTopic);
+
+		Thread first = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					applicationsConsumer.setMessageListener(new MessageListener() {
+
+						@Override
+						public void onMessage(Message message) {
+							try {
+								// Extract the necessary information from the received message and create an
+								// OfferMessage
+								if (message instanceof ObjectMessage) {
+									Object msgObj = ((ObjectMessage) message).getObject();
+									if (msgObj instanceof ClientMessage) {
+										ClientMessage request = (ClientMessage)
+					                            ((ObjectMessage) message).getObject();
+					                    OfferMessage offerMessage = new OfferMessage(request.getInfo(), new LinkedList<>());
+					                    cache.put(Long.valueOf(request.getToken()), offerMessage);
+									}
+									message.acknowledge();
+
+								}
+							} catch (JMSException e) {
+								e.printStackTrace();
+							}
+						}
+
+					});
+				} catch (JMSException e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		first.start();
+
+		Thread second = new Thread(() -> {
+			try {
+				quotationsConsumer.setMessageListener(new MessageListener() {
+
+					@Override
+					public void onMessage(Message QuotationMessage) {
+						try {
+							
+							if (QuotationMessage instanceof ObjectMessage) {
+								Object msgObj = ((ObjectMessage) QuotationMessage).getObject();
+								QuotationMessage responseMessage = (QuotationMessage) msgObj;
+								
+								System.out.println("Quotation received from " + responseMessage.getQuotation() );
+				                cache.get(responseMessage.getToken()).getQuotations().add(responseMessage.getQuotation());
+								QuotationMessage.acknowledge();
+
+							}
+						} catch (JMSException e) {
+							e.printStackTrace();
+						}
+
+					}
+				});
+
+			} catch (JMSException e) {
+				e.printStackTrace();
+			}
+		});
+		second.start();
+		
+		while (true) {
+			try {
+			Thread.sleep(5000);
+			if (cache.size() == 0)
+				continue;
+			for (OfferMessage temp : cache.values()) {
+				Message response = session.createObjectMessage(temp);
+				offersProducer.send(response);
+				response.acknowledge();
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	}
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="dodgygeezers.DodgygeezersTest" time="0.356" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\ridhi\OneDrive\UCD\Trimester4\DistributedSystem\lifeco-jms\task5\dodgygeezers\target\test-classes;C:\Users\ridhi\OneDrive\UCD\Trimester4\DistributedSystem\lifeco-jms\task5\dodgygeezers\target\classes;C:\Users\ridhi\OneDrive\UCD\Trimester4\DistributedSystem\lifeco-jms\task5\core\target\core-0.0.1.jar;C:\Users\ridhi\OneDrive\UCD\Trimester4\DistributedSystem\lifeco-jms\task5\auldfellas\target\auldfellas-0.0.1.jar;C:\Users\ridhi\.m2\repository\org\apache\activemq\activemq-core\5.7.0\activemq-core-5.7.0.jar;C:\Users\ridhi\.m2\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar;C:\Users\ridhi\.m2\repository\org\apache\geronimo\specs\geronimo-jms_1.1_spec\1.1.1\geronimo-jms_1.1_spec-1.1.1.jar;C:\Users\ridhi\.m2\repository\org\apache\activemq\kahadb\5.7.0\kahadb-5.7.0.jar;C:\Users\ridhi\.m2\repository\org\apache\activemq\protobuf\activemq-protobuf\1.1\activemq-protobuf-1.1.jar;C:\Users\ridhi\.m2\repository\org\fusesource\mqtt-client\mqtt-client\1.3\mqtt-client-1.3.jar;C:\Users\ridhi\.m2\repository\org\fusesource\hawtdispatch\hawtdispatch-transport\1.11\hawtdispatch-transport-1.11.jar;C:\Users\ridhi\.m2\repository\org\fusesource\hawtdispatch\hawtdispatch\1.11\hawtdispatch-1.11.jar;C:\Users\ridhi\.m2\repository\org\fusesource\hawtbuf\hawtbuf\1.9\hawtbuf-1.9.jar;C:\Users\ridhi\.m2\repository\org\apache\geronimo\specs\geronimo-j2ee-management_1.1_spec\1.0.1\geronimo-j2ee-management_1.1_spec-1.0.1.jar;C:\Users\ridhi\.m2\repository\org\springframework\spring-context\3.0.7.RELEASE\spring-context-3.0.7.RELEASE.jar;C:\Users\ridhi\.m2\repository\org\springframework\spring-aop\3.0.7.RELEASE\spring-aop-3.0.7.RELEASE.jar;C:\Users\ridhi\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\ridhi\.m2\repository\org\springframework\spring-beans\3.0.7.RELEASE\spring-beans-3.0.7.RELEASE.jar;C:\Users\ridhi\.m2\repository\org\springframework\spring-core\3.0.7.RELEASE\spring-core-3.0.7.RELEASE.jar;C:\Users\ridhi\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\ridhi\.m2\repository\org\springframework\spring-expression\3.0.7.RELEASE\spring-expression-3.0.7.RELEASE.jar;C:\Users\ridhi\.m2\repository\org\springframework\spring-asm\3.0.7.RELEASE\spring-asm-3.0.7.RELEASE.jar;C:\Users\ridhi\.m2\repository\commons-net\commons-net\3.1\commons-net-3.1.jar;C:\Users\ridhi\.m2\repository\org\jasypt\jasypt\1.9.0\jasypt-1.9.0.jar;C:\Users\ridhi\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\ridhi\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\ridhi\AppData\Local\Temp\surefire2263824300917759565\surefirebooter-20231025232156467_8.jar C:\Users\ridhi\AppData\Local\Temp\surefire2263824300917759565 2023-10-25T23-21-51_541-jvmRun1 surefire-20231025232156467_6tmp surefire_1-20231025232156467_7tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\ridhi\OneDrive\UCD\Trimester4\DistributedSystem\lifeco-jms\task5\dodgygeezers\target\test-classes;C:\Users\ridhi\OneDrive\UCD\Trimester4\DistributedSystem\lifeco-jms\task5\dodgygeezers\target\classes;C:\Users\ridhi\OneDrive\UCD\Trimester4\DistributedSystem\lifeco-jms\task5\core\target\core-0.0.1.jar;C:\Users\ridhi\OneDrive\UCD\Trimester4\DistributedSystem\lifeco-jms\task5\auldfellas\target\auldfellas-0.0.1.jar;C:\Users\ridhi\.m2\repository\org\apache\activemq\activemq-core\5.7.0\activemq-core-5.7.0.jar;C:\Users\ridhi\.m2\repository\org\slf4j\slf4j-api\1.6.6\slf4j-api-1.6.6.jar;C:\Users\ridhi\.m2\repository\org\apache\geronimo\specs\geronimo-jms_1.1_spec\1.1.1\geronimo-jms_1.1_spec-1.1.1.jar;C:\Users\ridhi\.m2\repository\org\apache\activemq\kahadb\5.7.0\kahadb-5.7.0.jar;C:\Users\ridhi\.m2\repository\org\apache\activemq\protobuf\activemq-protobuf\1.1\activemq-protobuf-1.1.jar;C:\Users\ridhi\.m2\repository\org\fusesource\mqtt-client\mqtt-client\1.3\mqtt-client-1.3.jar;C:\Users\ridhi\.m2\repository\org\fusesource\hawtdispatch\hawtdispatch-transport\1.11\hawtdispatch-transport-1.11.jar;C:\Users\ridhi\.m2\repository\org\fusesource\hawtdispatch\hawtdispatch\1.11\hawtdispatch-1.11.jar;C:\Users\ridhi\.m2\repository\org\fusesource\hawtbuf\hawtbuf\1.9\hawtbuf-1.9.jar;C:\Users\ridhi\.m2\repository\org\apache\geronimo\specs\geronimo-j2ee-management_1.1_spec\1.0.1\geronimo-j2ee-management_1.1_spec-1.0.1.jar;C:\Users\ridhi\.m2\repository\org\springframework\spring-context\3.0.7.RELEASE\spring-context-3.0.7.RELEASE.jar;C:\Users\ridhi\.m2\repository\org\springframework\spring-aop\3.0.7.RELEASE\spring-aop-3.0.7.RELEASE.jar;C:\Users\ridhi\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\ridhi\.m2\repository\org\springframework\spring-beans\3.0.7.RELEASE\spring-beans-3.0.7.RELEASE.jar;C:\Users\ridhi\.m2\repository\org\springframework\spring-core\3.0.7.RELEASE\spring-core-3.0.7.RELEASE.jar;C:\Users\ridhi\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\ridhi\.m2\repository\org\springframework\spring-expression\3.0.7.RELEASE\spring-expression-3.0.7.RELEASE.jar;C:\Users\ridhi\.m2\repository\org\springframework\spring-asm\3.0.7.RELEASE\spring-asm-3.0.7.RELEASE.jar;C:\Users\ridhi\.m2\repository\commons-net\commons-net\3.1\commons-net-3.1.jar;C:\Users\ridhi\.m2\repository\org\jasypt\jasypt\1.9.0\jasypt-1.9.0.jar;C:\Users\ridhi\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\ridhi\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\ridhi"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_202\jre"/>
+    <property name="basedir" value="C:\Users\ridhi\OneDrive\UCD\Trimester4\DistributedSystem\lifeco-jms\task5\dodgygeezers"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\ridhi\AppData\Local\Temp\surefire2263824300917759565\surefirebooter-20231025232156467_8.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_202-b08"/>
+    <property name="user.name" value="ridhi"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\ridhi\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\ridhi\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_202"/>
+    <property name="user.dir" value="C:\Users\ridhi\OneDrive\UCD\Trimester4\DistributedSystem\lifeco-jms\task5\dodgygeezers"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\ridhi\anaconda3\condabin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Python311\Scripts\;C:\Python311\;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseGit\bin;C:\Program Files\Graphviz\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\apache-maven-3.9.4\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Program Files\Kubernetes\Minikube;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Users\ridhi\anaconda3\envs\comp30830;C:\Users\ridhi\anaconda3\envs\comp30830\Library\mingw-w64\bin;C:\Users\ridhi\anaconda3\envs\comp30830\Library\usr\bin;C:\Users\ridhi\anaconda3\envs\comp30830\Library\bin;C:\Users\ridhi\anaconda3\envs\comp30830\Scripts;C:\Users\ridhi\anaconda3;C:\Users\ridhi\anaconda3\Library\mingw-w64\bin;C:\Users\ridhi\anaconda3\Library\usr\bin;C:\Users\ridhi\anaconda3\Library\bin;C:\Users\ridhi\anaconda3\Scripts;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\ridhi\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\ridhi\AppData\Local\Programs\Python\Python310\;C:\Users\ridhi\AppData\Local\Microsoft\WindowsApps;C:\Users\ridhi\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files (x86)\Brackets\;C:\Users\ridhi\AppData\Local\GitHubDesktop\bin;C:\Users\ridhi\AppData\Roaming\npm;C:\Python311\Scripts;C:\Users\ridhi\AppData\Local\Microsoft\WinGet\Packages\Kubernetes.kompose_Microsoft.Winget.Source_8wekyb3d8bbwe;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.202-b08"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="testService" classname="dodgygeezers.DodgygeezersTest" time="0.314">
+    <system-out><![CDATA[token: 1
+quotation: service.core.Quotation@1dfe2924
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+</testsuite>
